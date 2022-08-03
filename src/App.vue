@@ -1,7 +1,7 @@
 <!--
  * @Description: App.vue
  * @Date: 2022-07-31 18:29:16
- * @LastEditTime: 2022-07-31 20:49:11
+ * @LastEditTime: 2022-08-02 21:15:01
  * @FilePath: \app\src\App.vue
 -->
 <template>
@@ -17,12 +17,17 @@
 import Header from "./components/Header/index.vue";
 import Footer from "./components/Footer/index.vue";
 
+//TODO
+import {reqCategoryList} from "@/api";
 export default {
   name: "App",
   components: {
     Header,
     Footer,
   },
+  mounted(){
+    reqCategoryList();
+  }
 };
 </script>
 

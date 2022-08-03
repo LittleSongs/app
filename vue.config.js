@@ -1,7 +1,7 @@
 /*
  * @Description: 
  * @Date: 2022-07-31 18:29:16
- * @LastEditTime: 2022-08-02 11:35:13
+ * @LastEditTime: 2022-08-02 21:10:13
  * @FilePath: \app\vue.config.js
  */
 const { defineConfig } = require('@vue/cli-service')
