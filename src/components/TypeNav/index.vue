@@ -1,12 +1,13 @@
 <!--
  * @Description: 
  * @Date: 2022-07-31 21:22:06
- * @LastEditTime: 2022-07-31 21:23:14
- * @FilePath: \app\src\pages\Home\TypeNav\index.vue
+ * @LastEditTime: 2022-08-03 15:19:28
+ * @FilePath: \app\src\components\TypeNav\index.vue
 -->
 <template>
   <!-- 商品分类导航 -->
   <div class="type-nav">
+    <h1>{{categoryList}}</h1>
     <div class="container">
       <h2 class="all">全部商品分类</h2>
       <nav class="nav">
@@ -1699,8 +1700,24 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 export default {
   name: "TypeNav",
+  data(){
+    return{
+
+    }
+  },
+  mounted(){
+    this.$store.dispatch('categoryList');
+  },
+  computed:{
+    ...mapState({
+      categoryList:(state)=>{
+        console.log(state);
+      }
+    })
+  }
 };
 </script>
 
